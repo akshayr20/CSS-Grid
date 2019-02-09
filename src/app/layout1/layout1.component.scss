@@ -1,0 +1,32 @@
+.container {
+  width: 750px;
+  background-color: #eee;
+  margin: 30px auto;
+  display: grid;
+  grid-template-rows: 100px 150px 300px 100px;
+  grid-template-columns: repeat(3, 1fr) 125px;
+  grid-gap: 20px;
+
+  & > * {
+    padding: 20px;
+    color: white;
+    background-color: red;
+  }
+}
+
+.header {
+  grid-row: 1/2;
+  grid-column: 1 / -1;
+}
+.sidebar {
+  grid-row: 2/4;
+  grid-column: 4/5;
+}
+.main-content {
+  grid-row: 3/4;
+  grid-column: 1 / span 3;
+}
+.footer {
+  grid-row: 4/5;
+  grid-column: 1 / -1;
+}
