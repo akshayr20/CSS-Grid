@@ -29,6 +29,7 @@
   }
   &-2 {
     background-color: red;
+    // span css grid
     grid-row: 2/3;
     grid-column: 1/2;
   }
@@ -36,7 +37,6 @@
     background-color: green;
     grid-row: 2/3;
     grid-column: 2/3;
-
   }
   &-4 {
     background-color: yellow;
@@ -45,10 +45,19 @@
   }
   &-5 {
     background-color: lightblue;
-    grid-row: 1/2;
-    grid-column: 2/3;
+    //    grid-row: 1/2;
+    // grid-column: 2/3;
+    // span 1 occupies 1 element, span 2 occupies 2 elements
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
   }
   &-6 {
     background-color: brown;
+    // if elements are not defined they will move to new row and column
+    // if they are explicitly defined, either they will be occupied,
+    //  under or above current grid cell, based on its z-index
+    // grid-row: 1 / -2;
+    // grid-column: 1/ -1
+    // -1 till the last, -2 second last,...
   }
 }
